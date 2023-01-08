@@ -61,6 +61,7 @@ public class boardManager : MonoBehaviour
             {
                 return true;
             }
+
         }
         return false;
 
@@ -85,7 +86,11 @@ public class boardManager : MonoBehaviour
                         {
                             gameManager.win(gameManager.currentTurn);
                         }
-                        else { gameManager.changeTurn(); }
+                        else if (System.Array.Exists(counterPositions, element => element == 'z') == false)
+                        {
+                            gameManager.win('z');
+                        }
+                        else { gameManager.changeTurn(); gameManager.swapCursor(); }
 
 
                     }

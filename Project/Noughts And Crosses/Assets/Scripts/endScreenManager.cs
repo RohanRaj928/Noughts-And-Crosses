@@ -28,9 +28,13 @@ public class endScreenManager : MonoBehaviour
         {
             text.text = "Noughts have won";
         }
-        else
+        else if (winner == 'c')
         {
             text.text = "Crosses have won";
+        }
+        else
+        {
+            text.text = "Draw";
         }
 
         winText.transform.localScale = Vector3.one;

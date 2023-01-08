@@ -16,14 +16,18 @@ public class gameManager : MonoBehaviour
     public Vector2 spawnRange1; //Defines the two ranges that fireworks can randomly spawn between, left and right of the board
     public Vector2 spawnRange2;
 
+    [Header("Cursor Data")]
+    public Texture2D crossCursor;
+    public Texture2D noughtCursor;
 
     public char currentTurn { get; private set; } = 'n';
     public bool gameInProgress { get; private set; } = true;
-
+    public char currentCursor { get; private set; } = 'n';
 
     private void Awake()
     {
         gameInProgress = true;
+        setCursor(currentCursor);
     }
 
 
@@ -37,6 +41,13 @@ public class gameManager : MonoBehaviour
 
     public void win(char winner)
     {
+        if (winner == 'z')
+        {
+            currentTurn = 'z';
+            gameEnd.Invoke(currentTurn);
+            return;
+        }
+
         if (gameInProgress == false)
         {
             return;
@@ -58,6 +69,33 @@ public class gameManager : MonoBehaviour
             fw.GetComponent<firework>().gm = thisComponent;
         }
 
+    }
+
+    public void setCursor(char team)
+    {
+        if (team == 'c')
+        {
+            Debug.Log("called 2");
+            Cursor.SetCursor(crossCursor, new Vector2(10,10), CursorMode.ForceSoftware);
+        }
+        else if (team == 'n')
+        {
+            Cursor.SetCursor(noughtCursor, new Vector2(10,10), CursorMode.ForceSoftware);
+        }
+    }
+    public void swapCursor()
+    {
+        Debug.Log("called");
+        if (currentCursor == 'n')
+        {
+            setCursor('c');
+            currentCursor = 'c';
+        }
+        else
+        {
+            setCursor('n');
+            currentCursor = 'n';
+        }
     }
 
 }

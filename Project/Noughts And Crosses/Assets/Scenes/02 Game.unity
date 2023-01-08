@@ -194,9 +194,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 7294029038992038777, guid: 35fd4ead970758741ac89cc465cfff23, type: 3}
+      propertyPath: tweenTime
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7294029038992038778, guid: 35fd4ead970758741ac89cc465cfff23, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7294029038992038778, guid: 35fd4ead970758741ac89cc465cfff23, type: 3}
       propertyPath: m_LocalPosition.x
@@ -238,6 +242,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9173483821147452829, guid: 35fd4ead970758741ac89cc465cfff23, type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9173483821147452829, guid: 35fd4ead970758741ac89cc465cfff23, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 35fd4ead970758741ac89cc465cfff23, type: 3}
@@ -270,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3639509904107257147, guid: b08c8b953f4de814a9cf1058093e0bb1, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3639509904107257147, guid: b08c8b953f4de814a9cf1058093e0bb1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -312,6 +324,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6413013399378318227, guid: b08c8b953f4de814a9cf1058093e0bb1, type: 3}
+      propertyPath: crossCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: 6e77329b46a4d3b45b5a11a181f5e59e, type: 3}
+    - target: {fileID: 6413013399378318227, guid: b08c8b953f4de814a9cf1058093e0bb1, type: 3}
+      propertyPath: noughtCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: 41733525063085f42a8192470dc8fdd1, type: 3}
     - target: {fileID: 6413013399378318227, guid: b08c8b953f4de814a9cf1058093e0bb1, type: 3}
       propertyPath: gameEnd.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -551,7 +571,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1144196606
 MonoBehaviour:
